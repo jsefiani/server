@@ -1,0 +1,38 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
+		"build": "npm run clean && cross-env NODE_ENV=production babel src --out-dir build",
+		"serve": "cross-env NODE_ENV=production node build/index.js",
+		"clean": "rimraf build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jsefiani/server.git"
+	},
+	"author": "Jawad Sefiani",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jsefiani/server/issues"
+	},
+	"homepage": "https://github.com/jsefiani/server#readme",
+	"dependencies": {
+		"express": "~4.17.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "~7.5.5",
+		"@babel/core": "~7.5.5",
+		"@babel/node": "~7.5.5",
+		"@babel/preset-env": "~7.5.5",
+		"babel-loader": "~8.0.6",
+		"cross-env": "~5.2.1",
+		"eslint": "~6.3.0",
+		"nodemon": "~1.19.1",
+		"rimraf": "~3.0.0",
+		"webpack": "~4.39.3",
+		"webpack-cli": "~3.3.7"
+	}
+}
